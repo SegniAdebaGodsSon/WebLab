@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.buyItemImg{
+    background-image: url(https://cdn.pixabay.com/photo/2018/07/10/10/38/edge-3528319_1280.jpg);
+    background-position: center center;
+    height: 300px;
+    width: 400px;
+}
