@@ -25,7 +25,12 @@ var calcBmi = function(weight, height){
 
 console.log(calcBmi(89, ""))
 
+let input = prompt('Enter your weight and height separated by a space');
+[height, weight] = input.split(" ");
+height = parseInt(height);
+weight = parseInt(weight);
 
+alert(`Your status: ${calcBmi(weight, height)}`);
 
 
 
