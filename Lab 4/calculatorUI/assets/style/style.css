@@ -1,0 +1,128 @@
+:root{
+    --black: #1D2225;
+    --white: #FAFAFA;
+    --purple: #5E4BB5;
+    --yellow: #FEC208;
+    --greyDark: #A1A2A2;
+    --greyLight: #D0D2D4;
+}
+*{
+   margin:0;
+   padding:0;
+}
+
+body{
+    background-color: var(--black);
+}
+
+p{
+    font-size: 27px;
+    font-family: sans-serif;
+}
+
+.calculator{
+    width: max-content;
+    margin: 5em auto;
+    color: rgb(127, 127, 127);
+    box-shadow: 0px 0px 100px black;
+}
+
+
+.screen{
+    text-align: end;
+    padding-right: 1em;
+    padding-top: 1em;
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
+    height: 200px;
+}
+
+
+
+.screen .result{
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.keys{
+    font-size: 0;
+}
+.keys p{
+    color: var(--greyLight);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+    line-height:50px;
+}
+
+.keys div :not(:last-child){
+    background-color: var(--black);
+    border-bottom: 30px thin var(--greyDark)
+}
+
+.keys div :last-child{
+    background-color: var(--purple)
+}
+
+.keys div:last-child :first-child {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.keys p:hover{
+    cursor: pointer;
+    color: var(--greyDark);
+}
+
+
+
+body>p{
+    position: absolute;
+    color: rgba(84, 84, 84, 0.3);
+    font-size: 300px;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+.add{
+    top: 5px;
+    right: 20%;
+    z-index: -1;
+}
+
+.times{
+    top: 700px;
+    right: 10%;
+    z-index: -1;
+}
+
+.divide{
+    top: 450px;
+    left: 10%;
+    z-index: -1;
+}
+
+.minus{
+    top: 10px;
+    left: 20%;
+    z-index: -1;
+
+}
+
+.equals{
+    top: 700px;
+    left: 15%;
+    z-index: -1;
+}
+
+.keys{
+    background-color:  rgba(84, 84, 84, 0.3);
+}
+
+.keys div p{
+    margin-right: 1px;
+    margin-top: 1px;
+}
