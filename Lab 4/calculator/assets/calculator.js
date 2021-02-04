@@ -27,6 +27,12 @@ let div = (x, y) => {
     return x/y;
 }
 
+let mod = (x, y) => {
+    x = parseInt(x)
+    y = parseInt(y)
+    return x % y;
+}
+
 console.log("=================== calculator.js ====================");
 // (
 //     function(){
@@ -65,4 +71,4 @@ console.log("=================== calculator.js ====================");
 //     }
 // )()
 
- export {add, average, sub, mult, div};
+ export {add, average, sub, mult, div, mod};
