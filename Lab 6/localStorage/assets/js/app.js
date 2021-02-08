@@ -28,8 +28,6 @@ reloadIcon.addEventListener('click', reloadPage);
 sortRef.addEventListener('click', sort)
 
 
-let listItems = [];
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems);
@@ -55,7 +53,8 @@ function addNewTask(e) {
         return;
     }
 
-    render(listItems.sort((a,b) => a.addTime - b.addTime));
+    render(db.getFromDB().sort((a, b) => a.addTime - b.addTime));
+
 
     // Create an li element when the user adds a task 
     const li = document.createElement('li');
@@ -75,8 +74,6 @@ function addNewTask(e) {
 
     let task = {'addValue': taskInput.value.trim(), 'addTime': new Date().getTime()};
 
-
-    listItems.push(task);
     db.addToDB(task)
 }
 
