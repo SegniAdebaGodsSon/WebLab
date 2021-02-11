@@ -55,26 +55,32 @@ function addNewTask(e) {
 
     render(db.getFromDB().sort((a, b) => a.addTime - b.addTime));
 
+    taskInput.style.borderColor = 'green';
+    //add to DB
+    // create a new object with the form info
+    let newTask = {
+      taskname: taskInput.value,
+      date: new Date()
+    }
+    // Insert the object into the database 
+    let transaction = DB.transaction(['tasks'], 'readwrite');
+    let objectStore = transaction.objectStore('tasks');
 
-    // Create an li element when the user adds a task 
-    const li = document.createElement('li');
-    // Adding a class
-    li.className = 'collection-item';
-    // Create text node and append it 
-    li.appendChild(document.createTextNode(taskInput.value.trim()));
-    // Create new element for the link 
-    const link = document.createElement('a');
-    // Add class and the x marker for a 
-    link.className = 'delete-item secondary-content';
-    link.innerHTML = '<i class="fa fa-remove"></i>';
-    // Append link to li
-    li.appendChild(link);
-    // Append to UL 
-    taskList.appendChild(li);
+    let request = objectStore.add(newTask);
+    // on success
+    request.onsuccess = () => {
+      form.reset();
+      displayTaskList();
 
-    let task = {'addValue': taskInput.value.trim(), 'addTime': new Date().getTime()};
 
-    db.addToDB(task)
+    }
+    transaction.oncomplete = () => {
+      console.log('New appointment added');
+      //displayTaskList();
+    }
+    transaction.onerror = () => {
+      console.log('There was an error, try again!');
+    }
 }
 
 function render(tasks){
