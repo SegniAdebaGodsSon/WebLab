@@ -37,8 +37,6 @@ function displayTemplateExpression() {
     //3. Display it [change it to result1]
     templateExpression.innerHTML = result1;
 
-
-
 }
 
 function sum(x, y) {
