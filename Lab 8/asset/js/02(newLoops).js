@@ -28,7 +28,6 @@ function forINLoop() {
     // forInLoop.innerHTML +=
     //     `
     //     <li class="list-group-item" >${Key} : ${Value}</li>
-
     // `;
 
 }
