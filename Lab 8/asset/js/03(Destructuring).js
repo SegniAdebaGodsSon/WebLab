@@ -102,7 +102,6 @@ function sum1(x1, x2, x3, x4) {
 }
 
 
-
 //3. Make this function to support rest, and add 5 numbers
 function sum2(argument) {
 
