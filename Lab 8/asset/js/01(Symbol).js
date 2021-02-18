@@ -55,7 +55,7 @@ function displaySymbolObject() {
 
 
     //Display the object on console 
-    console.log(student);
+    console.table(student);
 
     // symbolObject.innerHTML = "View it On Console";
 

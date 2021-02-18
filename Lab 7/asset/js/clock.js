@@ -12,7 +12,7 @@ setInterval(() => {
     let ss = day.getSeconds() * minSecFactor;
     console.log(hh, mm, ss);
 
-    hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+    hr.style.transform = `rotateZ(${hh}deg)`;
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 });

@@ -44,7 +44,6 @@ function forOFLoop() {
     // 2. Inside the loop paint the UI [Use the Format Given Below]
     
     for(i of studentss){
-        console.log(i)
         forOfLoop.innerHTML +=
             `
             <li class="list-group-item" >Name : ${i.name}</li>
