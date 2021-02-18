@@ -28,6 +28,8 @@ function usingCall() {
         lastName: "Lanster",
     }
 
+        
+    console.log(this.fullName);
     //1. Borrow fullName using call
     //2. Pass call_demo[as ui_place] , Hi I am ,[message]
 
