@@ -37,7 +37,6 @@ function displaySymbolEquality() {
     symbolEquality.innerHTML = result;
 
 
-
 }
 
 function displaySymbolObject() {
